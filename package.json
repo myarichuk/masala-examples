@@ -1,7 +1,6 @@
 {
-  "name": "dice-parser",
+  "name": "masala-examples",
   "version": "0.1.0",
-  "description": "A dice notation parser, supports Roll20 spec",
   "types": "build/src/index.d.ts",
   "files": [
     "build/src"
