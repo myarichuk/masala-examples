@@ -12,13 +12,14 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
+    "esModuleInterop": true,
     "composite": true,
     "lib": [
       "DOM"
     ]
   },
   "include": [
-    "src/*.ts"
+    "src/**/*.ts"
   ]
 }
 

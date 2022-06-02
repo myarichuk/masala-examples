@@ -5,10 +5,13 @@ export interface Email {
   domain: string;
   topDomain: string;
 }
+const letterOrDigit = C.letter().or(N.digit());
 
-const username = C.letter()
-  .or(N.digit())
-  .or(C.charIn('.-_'))
+//special character must be followed by at least one letter or number
+const specialCharacter = C.charIn('.-_').then(letterOrDigit).rep();
+
+const username = letterOrDigit
+  .or(specialCharacter)
   .rep()
   .map((parsed: Tuple<unknown>) => {
     return parsed.array().join('');
